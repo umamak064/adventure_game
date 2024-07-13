@@ -1,9 +1,13 @@
 {
-  "name": "adventure_game",
-  "version": "1.0.0",
+  "name": "@umamak064/adventure_game",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

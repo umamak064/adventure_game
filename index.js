@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import inquirer from "inquirer";
 class Player {
     name;
@@ -28,8 +29,8 @@ let player = await inquirer.prompt([
     {
         name: "name",
         type: "input",
-        message: "please enter your name"
-    }
+        message: "please enter your name",
+    },
 ]);
 let opponent = await inquirer.prompt([
     {
@@ -40,8 +41,8 @@ let opponent = await inquirer.prompt([
             { name: "Vampire", value: "Vampire" },
             { name: "Alien", value: "Alien" },
             { name: "Zombies", value: "Zombies" },
-        ]
-    }
+        ],
+    },
 ]);
 let p1 = new Player(player.name);
 let o1 = new Opponent(opponent.select);
@@ -57,8 +58,8 @@ do {
                     { name: "Attack", value: "Attack" },
                     { name: "Drink portion", value: "Drink portion" },
                     { name: "Run for your life", value: "Run for your life" },
-                ]
-            }
+                ],
+            },
         ]);
         if (ask.opt == "Attack") {
             let num = Math.floor(Math.random() * 2);
@@ -101,8 +102,8 @@ do {
                     { name: "Attack", value: "Attack" },
                     { name: "Drink portion", value: "Drink portion" },
                     { name: "Run for your life", value: "Run for your life" },
-                ]
-            }
+                ],
+            },
         ]);
         if (ask.opt == "Attack") {
             let num = Math.floor(Math.random() * 2);
@@ -129,7 +130,7 @@ do {
             p1.fuelincrease();
             console.log(`you drink health portion, your fuel is ${p1.fuel}`);
         }
-        if (ask.opt == "'Run for your life") {
+        if (ask.opt == "Run for your life") {
             console.log("you loose");
             process.exit();
         }
@@ -145,8 +146,8 @@ do {
                     { name: "Attack", value: "Attack" },
                     { name: "Drink portion", value: "Drink portion" },
                     { name: "Run for your life", value: "Run for your life" },
-                ]
-            }
+                ],
+            },
         ]);
         if (ask.opt == "Attack") {
             let num = Math.floor(Math.random() * 2);
@@ -173,7 +174,7 @@ do {
             p1.fuelincrease();
             console.log(`you drink health portion, your fuel is ${p1.fuel}`);
         }
-        if (ask.opt == "'Run for your life") {
+        if (ask.opt == "Run for your life") {
             console.log("you loose");
             process.exit();
         }
